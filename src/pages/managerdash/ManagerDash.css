@@ -1,0 +1,411 @@
+/* ===========================
+   TOP NAVBAR
+=========================== */
+
+.top-navbar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  background: #fff;
+  border-bottom: 1px solid #e8ecf3;
+}
+
+.menu-toggle {
+  display: none;
+  border: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.search-box {
+  width: 350px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 45px;
+  padding: 0 15px;
+  border: 1px solid #dbe2ec;
+  border-radius: 11px;
+  background: #f8fafc;
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.top-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.notification-icon {
+  position: relative;
+  font-size: 20px;
+  color: #64748b;
+}
+
+.notification-icon span {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ef4444;
+  color: #fff;
+  font-size: 10px;
+}
+
+.top-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-avatar {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #fff;
+  font-weight: 700;
+}
+
+.profile-avatar.small {
+  width: 38px;
+  height: 38px;
+  font-size: 13px;
+}
+
+.top-profile-info h4 {
+  margin: 0;
+  font-size: 13px;
+  color: #172033;
+}
+
+.top-profile-info p {
+  margin: 3px 0 0;
+  font-size: 11px;
+  color: #64748b;
+}
+
+/* ===========================
+   LAYOUT
+=========================== */
+
+.managerdash-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+.managerdash-main {
+  flex: 1;
+  margin-left: 270px;
+  min-height: 100vh;
+}
+
+.managerdash-content {
+  padding: 30px;
+  padding-top: 30px;
+}
+
+/* ===========================
+   SUMMARY CARDS
+=========================== */
+
+.managerdash-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.managerdash-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e8ecf3;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+.managerdash-summary-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  font-size: 22px;
+  color: white;
+}
+
+.managerdash-summary-icon.blue {
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+}
+
+.managerdash-summary-icon.green {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+}
+
+.managerdash-summary-icon.red {
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+}
+
+.managerdash-summary-icon.orange {
+  background: linear-gradient(135deg, #ea580c, #f97316);
+}
+
+.managerdash-summary-card p {
+  margin: 0 0 5px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.managerdash-summary-card h2 {
+  margin: 0;
+  font-size: 26px;
+  color: #172033;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 1000px) {
+
+  .managerdash-main {
+    margin-left: 0;
+  }
+
+  .managerdash-content {
+    padding: 20px;
+    padding-top: 20px;
+  }
+
+  .search-box {
+    width: 220px;
+  }
+
+}
+/* ================= ROW ================= */
+
+.managerdash-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin-bottom:20px;
+}
+
+/* ================= CARD ================= */
+
+.managerdash-card{
+    background:#fff;
+    border-radius:16px;
+    border:1px solid #e8ecf3;
+    box-shadow:0 8px 25px rgba(15,23,42,.05);
+    padding:22px;
+    margin-bottom:20px;
+}
+
+.managerdash-card h3{
+    margin:0 0 18px;
+    font-size:16px;
+    color:#172033;
+}
+
+/* ================= OVERVIEW ================= */
+
+.managerdash-overview-list{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.managerdash-overview-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#475569;
+    font-size:13px;
+}
+
+.text-green{
+    color:#16a34a;
+}
+
+.text-red{
+    color:#dc2626;
+}
+
+.text-orange{
+    color:#ea580c;
+}
+
+/* ================= TABLE ================= */
+
+.managerdash-table-wrapper{
+    width:100%;
+    overflow-x:auto;
+}
+
+.managerdash-table{
+    width:100%;
+    min-width:650px;
+    border-collapse:collapse;
+}
+
+.managerdash-table th{
+    padding:14px 16px;
+    text-align:left;
+    background:#f8fafc;
+    color:#64748b;
+    font-size:12px;
+    text-transform:uppercase;
+}
+
+.managerdash-table td{
+    padding:14px 16px;
+    border-bottom:1px solid #edf0f5;
+    color:#475569;
+    font-size:13px;
+}
+
+/* ===========================
+   PANEL HEADER (shared)
+=========================== */
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.panel-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #1f2937;
+}
+
+.panel-header p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* ===========================
+   HOLIDAYS
+=========================== */
+
+.holidays-section {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .06);
+}
+
+.holiday-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.holiday-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px;
+  border-radius: 12px;
+  background: #fafbfe;
+  border: 1px solid #eef1f6;
+}
+
+.holiday-date {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: #eef2ff;
+  color: #4338ca;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.holiday-date strong {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.holiday-date span {
+  font-size: 11px;
+}
+
+.holiday-details strong {
+  display: block;
+  font-size: 15px;
+  color: #111827;
+}
+
+.holiday-details span {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* ================= STATUS ================= */
+
+.managerdash-status{
+    display:inline-block;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:700;
+}
+
+.status-pending{
+    color:#b45309;
+    background:#fef3c7;
+}
+
+.status-approved{
+    color:#15803d;
+    background:#dcfce7;
+}
+
+.status-rejected{
+    color:#b91c1c;
+    background:#fee2e2;
+}
+
+.managerdash-no-data{
+    text-align:center;
+    padding:30px !important;
+}
+
+@media(max-width:1000px){
+
+.managerdash-row{
+grid-template-columns:1fr;
+}
+
+}

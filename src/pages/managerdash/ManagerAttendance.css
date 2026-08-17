@@ -1,0 +1,321 @@
+/* ================= LAYOUT ================= */
+
+.managerattendance-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+.managerattendance-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #f5f7fb;
+}
+
+/* ================= TOP NAVBAR ================= */
+
+.top-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 16px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f5f7fb;
+  border-radius: 10px;
+  padding: 10px 15px;
+  width: 300px;
+  color: #94a3b8;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.notification-icon {
+  position: relative;
+  font-size: 20px;
+  color: #475569;
+  cursor: pointer;
+}
+
+.notification-icon span {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.top-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-avatar.small {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.top-profile-info h4 {
+  font-size: 14px;
+  color: #1e293b;
+  margin: 0;
+}
+
+.top-profile-info p {
+  font-size: 12px;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* ================= CONTENT ================= */
+
+.managerattendance-content {
+  padding: 30px;
+}
+
+/* ================= CARD ================= */
+
+.managerattendance-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+}
+
+.managerattendance-card h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.managerattendance-card p {
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+/* ================= FORM ================= */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #dbe2ea;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  transition: .3s;
+  background: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,.15);
+}
+
+/* ================= BUTTON ================= */
+
+.attendance-btn-area {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.managerattendance-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 30px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+.managerattendance-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+
+/* ================= TABLE CARD ================= */
+
+.managerattendance-table-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
+
+.managerattendance-table-card h3 {
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+/* ================= TABLE ================= */
+
+.managerattendance-table-wrapper {
+  overflow-x: auto;
+}
+
+.managerattendance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.managerattendance-table th {
+  background: #f8fafc;
+  color: #475569;
+  padding: 15px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.managerattendance-table td {
+  padding: 15px;
+  border-top: 1px solid #edf2f7;
+}
+
+.managerattendance-table tr:hover {
+  background: #f8fafc;
+}
+
+/* ================= STATUS ================= */
+
+.status-present {
+  background: #dcfce7;
+  color: #15803d;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-absent {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-leave {
+  background: #fef3c7;
+  color: #b45309;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width:768px){
+
+  .managerattendance-content{
+    padding:20px;
+  }
+
+  .top-navbar {
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .full-width{
+    grid-column:span 1;
+  }
+
+}
+.employee-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.employee-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  font-weight: 700;
+}
+.employee_name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: 0.3px;
+}

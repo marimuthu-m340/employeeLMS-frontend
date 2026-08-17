@@ -1,0 +1,280 @@
+/* ===========================
+   LAYOUT
+=========================== */
+
+.company-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+.company-main {
+  flex: 1;
+  margin-left: 270px;
+  min-height: 100vh;
+}
+
+.company-content {
+  padding: 30px;
+  padding-top: 110px;
+}
+
+/* ===========================
+   PAGE HEADER
+=========================== */
+
+.page-header {
+  margin-top: -80px;
+}
+
+.page-header h2 {
+  margin: 0;
+  font-size: 28px;
+  color: #172033;
+}
+
+.page-header p {
+  margin-top: 6px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* ===========================
+   TABS
+=========================== */
+
+.company-tabs {
+  display: flex;
+  justify-content: center;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.tab-btn {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid #dbe2ec;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  transition: .3s;
+}
+
+.tab-btn:hover {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.tab-btn.active {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.company-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e8ecf3;
+  box-shadow: 0 8px 25px rgba(15,23,42,.05);
+  padding: 25px;
+}
+
+.company-card h3 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #172033;
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+.company-form {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 14px;
+  border: 1px solid #dbe2ec;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+  transition: .3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.save-btn {
+  padding: 12px 24px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.save-btn:hover {
+  background: #1d4ed8;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:1000px){
+
+  .company-main{
+    margin-left:0;
+  }
+
+  .company-content{
+    padding:20px;
+    padding-top:100px;
+  }
+
+  .company-form{
+    grid-template-columns:1fr;
+  }
+
+  .form-actions{
+    justify-content:center;
+  }
+
+}
+
+@media (max-width:768px){
+
+  .company-tabs{
+    flex-direction:column;
+  }
+
+  .tab-btn{
+    width:100%;
+  }
+
+}
+.company-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dcdfe6;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  background: #fff;
+}
+.cancel-btn {
+  background: #e5e7eb;
+  color: #111827;
+  margin-left: 10px;
+}
+
+.cancel-btn:hover {
+  background: #d1d5db;
+}
+/* ===========================
+   POLICIES
+=========================== */
+
+.policy-content {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  line-height: 1.8;
+  color: #475569;
+  white-space: pre-line;
+}
+
+.policy-content p {
+  margin: 0;
+}
+
+.company-card textarea {
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+  border: 1px solid #dbe2ec;
+  border-radius: 10px;
+  font-size: 14px;
+  resize: vertical;
+  outline: none;
+  font-family: inherit;
+}
+
+.company-card textarea:focus {
+  border-color: #4f46e5;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.cancel-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #e5e7eb;
+  color: #374151;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cancel-btn:hover {
+  background: #d1d5db;
+}
+
+.company-card hr {
+  margin: 40px 0;
+  border: none;
+  border-top: 1px solid #e5e7eb;
+}

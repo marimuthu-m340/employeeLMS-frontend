@@ -1,0 +1,76 @@
+.holiday-main {
+  margin-top:40px;
+  margin-left: 280px;
+  padding: 30px;
+  min-height: 100vh;
+  background: #f5f7fb;
+  margin-bottom:20px;
+}
+
+.holiday-main h1 {
+  margin-bottom: 25px;
+  color: #1e293b;
+}
+
+.holiday-form {
+  margin-top:40px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  display: grid;
+  gap: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.holiday-form input,
+.holiday-form select,
+.holiday-form textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.holiday-form button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.holiday-form button:hover {
+  background: #1d4ed8;
+}
+
+table {
+  width: 100%;
+  background: white;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background: #2563eb;
+  color: white;
+}
+
+td button {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}

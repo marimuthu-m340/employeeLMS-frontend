@@ -1,0 +1,493 @@
+/* =========================
+   LAYOUT
+========================= */
+
+.employeeattendance-main {
+  flex: 1;
+  margin-left: 280px;
+  min-height: 100vh;
+  background: #f5f7fb;
+  padding: 28px;
+}
+
+/* =========================
+   TOP NAVBAR
+========================= */
+
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.search-box {
+  width: 420px;
+  height: 50px;
+  background: #fff;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+  margin-left:260px;
+}
+
+.search-box svg {
+  color: #64748b;
+  font-size: 18px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  width: 100%;
+  font-size: 15px;
+  background: transparent;
+}
+
+.top-right{
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+.notification-icon{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  background:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  box-shadow:0 6px 20px rgba(0,0,0,.08);
+  cursor:pointer;
+}
+
+.notification-icon svg{
+  font-size:20px;
+  color:#334155;
+}
+
+.notification-icon span{
+  position:absolute;
+  top:-4px;
+  right:-4px;
+  width:18px;
+  height:18px;
+  background:#ef4444;
+  color:#fff;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:10px;
+  font-weight:700;
+}
+
+.top-profile{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  background:white;
+  padding:8px 12px;
+  border-radius:18px;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.profile-avatar{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  background:#2563eb;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:18px;
+  font-weight:700;
+}
+
+.top-profile h4{
+  margin:0;
+  font-size:15px;
+  color:#0f172a;
+}
+
+.top-profile p{
+  margin-top:4px;
+  color:#64748b;
+  font-size:13px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.attendance-card{
+  background:#fff;
+  border-radius:24px;
+  margin-top:50px;
+  padding:28px;
+  box-shadow:0 15px 40px rgba(15,23,42,.08);
+}
+
+.page-title{
+  text-align:center;
+  font-size:36px;
+  font-weight:700;
+  color:#0f172a;
+  margin-bottom:28px;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.attendance-table{
+  width:100%;
+  border-collapse:collapse;
+  overflow:hidden;
+  border-radius:18px;
+}
+
+.attendance-table thead{
+  background:#2563eb;
+}
+
+.attendance-table th{
+  color:white !important;
+  font-size:16px !important;
+  font-weight:600;
+  padding:18px;
+  text-align:center;
+  letter-spacing:.5px;
+}
+
+.attendance-table td{
+  padding:18px;
+  font-size:14px !important;
+  font-weight:500 !important;
+  text-align:center;
+  color:#1e293b;
+  border-bottom:1px solid #e2e8f0;
+}
+
+.attendance-table tbody tr:hover{
+  background:#f8fafc;
+}
+
+/* =========================
+   STATUS BADGE
+========================= */
+
+.status-present{
+  display:inline-block;
+  background:#dcfce7;
+  color:#16a34a !important;
+  padding:6px 16px;
+  border-radius:999px;
+  font-size:14px !important;
+  font-weight:700;
+  line-height:1;
+}
+
+.status-absent{
+  display:inline-block;
+  background:#fee2e2;
+  color:#dc2626 !important;
+  padding:6px 16px;
+  border-radius:999px;
+  font-size:14px !important;
+  font-weight:700;
+  line-height:1;
+}
+
+.status-leave{
+  display:inline-block;
+  background:#fef3c7;
+  color:#d97706 !important;
+  padding:6px 16px;
+  border-radius:999px;
+  font-size:14px !important;
+  font-weight:700;
+  line-height:1;
+}
+
+/* =========================
+   REMARKS
+========================= */
+
+.attendance-table td.remarks-text,
+.remarks-text{
+  font-size:14px !important;
+  font-weight:500 !important;
+  color:#334155;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+
+.employeeattendance-main{
+margin-left:0;
+padding:18px;
+}
+
+.top-navbar{
+flex-direction:column;
+align-items:stretch;
+gap:15px;
+}
+
+.search-box{
+width:100%;
+}
+
+.attendance-card{
+overflow:auto;
+}
+
+.attendance-table{
+min-width:700px;
+}
+
+}
+/* ===========================
+   SUMMARY CARDS
+=========================== */
+
+/* ================= SUMMARY ================= */
+
+.attendance-summary{
+    display:grid;
+    margin-top:40px;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+    margin-bottom:30px;
+}
+
+.summary-card{
+    background:#fff;
+    border-radius:20px;
+    padding:22px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.3s;
+    border:1px solid #eef2f7;
+}
+
+.summary-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(37,99,235,.15);
+}
+
+.summary-icon{
+    width:70px;
+    height:70px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    color:white;
+}
+
+.working-card .summary-icon{
+    background:linear-gradient(135deg,#3b82f6,#2563eb);
+}
+
+.present-card .summary-icon{
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+}
+
+.absent-card .summary-icon{
+    background:linear-gradient(135deg,#ef4444,#dc2626);
+}
+
+.leave-card .summary-icon{
+    background:linear-gradient(135deg,#f59e0b,#d97706);
+}
+
+.summary-content{
+    flex:1;
+}
+
+.summary-content h4{
+    margin:0;
+    color:#64748b;
+    font-size:15px;
+    font-weight:600;
+}
+
+.summary-content h2{
+    margin:8px 0 4px;
+    font-size:34px;
+    color:#0f172a;
+    font-weight:700;
+}
+
+.summary-content p{
+    margin:0;
+    color:#94a3b8;
+    font-size:13px;
+}
+
+@media(max-width:992px){
+
+.attendance-summary{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+.attendance-summary{
+grid-template-columns:1fr;
+}
+
+}
+/* ===========================
+   MONTH FILTER
+=========================== */
+
+.attendance-filter{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:12px;
+    margin:60px 0;
+}
+
+.attendance-filter label{
+    font-size:15px;
+    font-weight:600;
+    color:#334155;
+}
+
+.attendance-filter input[type="month"]{
+    width:180px;
+    height:46px;
+    border:1px solid #dbe4ee;
+    border-radius:12px;
+    padding:0 14px;
+    font-size:15px;
+    background:#fff;
+    color:#334155;
+    outline:none;
+    box-shadow:0 6px 18px rgba(0,0,0,.05);
+    transition:.3s;
+}
+
+.attendance-filter input[type="month"]:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+}
+
+/* =========================
+   ATTENDANCE CALENDAR CARD
+========================= */
+
+.attendance-calendar-card{
+    background:#fff;
+    border-radius:24px;
+    padding:28px;
+    margin-top:10px;
+    box-shadow:0 15px 40px rgba(15,23,42,.08);
+    text-align:center;
+}
+
+.calendar-header h3{
+    margin:0 0 4px;
+    font-size:24px;
+    font-weight:700;
+    color:#0f172a;
+}
+
+.calendar-header p{
+    margin:0 0 20px;
+    color:#64748b;
+    font-size:14px;
+}
+
+.attendance-calendar-card .react-calendar{
+    border:none;
+    width:100%;
+    max-width:520px;
+    margin:0 auto;
+    font-family:inherit;
+}
+
+/* Highlighted tiles based on attendance status */
+
+.attendance-calendar-card .react-calendar .tile-present{
+    background:#dcfce7 !important;
+    color:#16a34a !important;
+    border-radius:10px;
+    font-weight:700;
+}
+
+.attendance-calendar-card .react-calendar .tile-absent{
+    background:#fee2e2 !important;
+    color:#dc2626 !important;
+    border-radius:10px;
+    font-weight:700;
+}
+
+.attendance-calendar-card .react-calendar .tile-leave{
+    background:#fef3c7 !important;
+    color:#d97706 !important;
+    border-radius:10px;
+    font-weight:700;
+}
+
+.attendance-calendar-card .react-calendar .tile-present:hover,
+.attendance-calendar-card .react-calendar .tile-absent:hover,
+.attendance-calendar-card .react-calendar .tile-leave:hover{
+    opacity:.85;
+}
+
+/* Legend */
+
+.calendar-legend{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:26px;
+    margin-top:20px;
+}
+
+.legend-item{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+    font-weight:600;
+    color:#334155;
+}
+
+.legend-dot{
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    display:inline-block;
+}
+
+.legend-present{
+    background:#16a34a;
+}
+
+.legend-absent{
+    background:#dc2626;
+}
+
+.legend-leave{
+    background:#d97706;
+}

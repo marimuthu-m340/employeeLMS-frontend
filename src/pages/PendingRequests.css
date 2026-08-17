@@ -1,0 +1,224 @@
+.pending-requests-page {
+  margin-left: 240px; /* adjust to match your Sidebar width */
+  min-height: 100vh;
+  background: #f6f7fb;
+  padding: 24px 32px;
+}
+
+/* ---------- Top navbar ---------- */
+.pending-requests-page .top-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  margin-bottom: 24px;
+}
+
+.pending-requests-page .search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f1f2f6;
+  padding: 8px 14px;
+  border-radius: 8px;
+  width: 260px;
+}
+
+.pending-requests-page .search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.pending-requests-page .top-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.pending-requests-page .notification-icon {
+  position: relative;
+  font-size: 18px;
+  color: #555;
+}
+
+.pending-requests-page .notification-icon span {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: #e74c3c;
+  color: #fff;
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 999px;
+}
+
+.pending-requests-page .top-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pending-requests-page .profile-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #4f46e5;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.pending-requests-page .top-profile h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.pending-requests-page .top-profile p {
+  margin: 0;
+  font-size: 12px;
+  color: #888;
+  text-transform: capitalize;
+}
+
+/* ---------- Page header ---------- */
+.pending-requests-container .page-header {
+  margin-top: 90px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.pending-requests-container .page-header h2 {
+  margin: 0 0 4px;
+  font-size: 22px;
+  color: #1f2937;
+}
+
+.pending-requests-container .page-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* ---------- Card + table ---------- */
+.requests-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  padding: 20px;
+}
+
+.status-text {
+  text-align: center;
+  padding: 40px 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.empty-state {
+  font-size: 16px;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.requests-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.requests-table thead tr {
+  text-align: left;
+  border-bottom: 2px solid #eef0f4;
+}
+
+.requests-table th {
+  padding: 12px 10px;
+  font-size: 13px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.requests-table td {
+  padding: 14px 10px;
+  font-size: 14px;
+  color: #1f2937;
+  border-bottom: 1px solid #f2f3f6;
+  vertical-align: middle;
+}
+
+.requests-table tbody tr:hover {
+  background: #fafbff;
+}
+
+.reason-cell {
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ---------- Action buttons ---------- */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-approve,
+.btn-reject {
+  border: none;
+  padding: 7px 14px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+}
+
+.btn-approve {
+  background: #22c55e;
+  color: #fff;
+}
+
+.btn-reject {
+  background: #ef4444;
+  color: #fff;
+}
+
+.btn-approve:hover:not(:disabled),
+.btn-reject:hover:not(:disabled) {
+  opacity: 0.88;
+}
+
+.btn-approve:active:not(:disabled),
+.btn-reject:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.btn-approve:disabled,
+.btn-reject:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .pending-requests-page {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .pending-requests-page .search-box {
+    width: 160px;
+  }
+}
