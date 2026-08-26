@@ -1,6 +1,5 @@
 import React from "react";
 import "./CompanyOverview.css";
-import companyLogo from "../assets/cloud-logo.png";
 import { useEffect, useState } from "react";
 import { getCompanySettings } from "../api/companysettingsApi";
 
