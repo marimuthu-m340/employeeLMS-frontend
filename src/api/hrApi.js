@@ -1,9 +1,9 @@
 import axios from "axios";
+import { API_BASE_URL } from "../apiConfig";
 
 const hrApi = axios.create({
 
-  baseURL: "http://localhost:5000/api/hr",
-
+baseURL: `${API_BASE_URL}/api/hr`,
   headers: {
     "Content-Type": "application/json",
   },

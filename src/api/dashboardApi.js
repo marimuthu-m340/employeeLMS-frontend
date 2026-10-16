@@ -1,7 +1,8 @@
   import axios from "axios";
+import { API_BASE_URL } from "../apiConfig";
 
   const dashboardApi = axios.create({
-    baseURL: "http://localhost:5000/api/dashboard",
+baseURL: `${API_BASE_URL}/api/dashboard`,
   });
 
   export const getDashboardStats = async () => {

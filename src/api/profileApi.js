@@ -1,6 +1,7 @@
 import axios from "axios";
+import { API_BASE_URL } from "../apiConfig";
 
-const BASE_URL = "http://localhost:5000/api/profile";
+const BASE_URL = `${API_BASE_URL}/api/profile`;
 
 export const getProfile = (id) => {
   return axios.get(`${BASE_URL}/${id}`);
@@ -13,7 +14,7 @@ export const changePassword = (data) => {
   const token = localStorage.getItem("token");
 
   return axios.put(
-    "http://localhost:5000/api/settings/change-password",
+`${API_BASE_URL}/api/settings/change-password`,
     data,
     {
       headers: {
@@ -26,7 +27,7 @@ export const updateTheme = (theme) => {
   const token = localStorage.getItem("token");
 
   return axios.put(
-    "http://localhost:5000/api/settings/theme",
+`${API_BASE_URL}/api/settings/theme`,
     { theme },
     {
       headers: {

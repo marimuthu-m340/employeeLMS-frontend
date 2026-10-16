@@ -1,7 +1,8 @@
 import axios from "axios";
+import { API_BASE_URL } from "../apiConfig";
 
 const attendanceApi = axios.create({
-  baseURL: "http://localhost:5000/api/attendance",
+  baseURL: `${API_BASE_URL}/api/attendance`,
   headers: {
     "Content-Type": "application/json",
   },
@@ -45,9 +46,7 @@ export const deleteAttendance = async (id) => {
 };
 
 export const getAdminAttendanceSummary = async () => {
-  const response = await axios.get(
-    "http://localhost:5000/api/attendance/admin-summary"
-  );
+  const response = await axios.get(`${API_BASE_URL}/api/attendance/admin-summary`);
 
   return response.data;
 };

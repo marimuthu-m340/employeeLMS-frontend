@@ -1,8 +1,9 @@
 import axios from "axios";
+import { API_BASE_URL } from "../apiConfig";
 
 const managerApi = axios.create({
-  baseURL: "http://localhost:5000/api/managers",
-  headers: {
+  baseURL: `${API_BASE_URL}/api/managers`,
+    headers: {
     "Content-Type": "application/json",
   },
 });

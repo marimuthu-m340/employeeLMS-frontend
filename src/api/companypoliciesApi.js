@@ -1,5 +1,5 @@
-const API_URL = "http://localhost:5000/api/companypolicies";
-
+import { API_BASE_URL } from "../apiConfig";
+const API_URL = `${API_BASE_URL}/api/companypolicies`;
 // GET
 export const getCompanyPolicies = async () => {
   const response = await fetch(API_URL);

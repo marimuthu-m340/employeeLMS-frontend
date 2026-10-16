@@ -1,6 +1,7 @@
 import axios from "axios";
+import { API_BASE_URL } from "../apiConfig";
 
-const API_URL = "http://localhost:5000/api/leaves";
+const API_URL = `${API_BASE_URL}/api/leaves`;
 
 const getAuthHeader = () => {
   const token = localStorage.getItem("token");
@@ -84,7 +85,7 @@ export const getPendingLeaves = async () => {
   const token = localStorage.getItem("token");
 
   const response = await axios.get(
-    "http://localhost:5000/api/leaves/pending",
+`${API_BASE_URL}/api/leaves/pending`,
     {
       headers: {
         Authorization: `Bearer ${token}`,

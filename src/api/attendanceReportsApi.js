@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/attendance-reports";
+const API_URL = "https://employeelms-backend-1.onrender.com/api/attendance-reports";
 
 export const getAttendanceReports = async () => {
   try {

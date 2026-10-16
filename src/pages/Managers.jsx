@@ -10,6 +10,7 @@ import {
   FaCheckCircle,
   FaTimesCircle,
 } from "react-icons/fa";
+import { API_BASE_URL } from "../apiConfig";
 import managerApi from "../api/managersApi";
 import { createManager } from "../api/managersApi";
 
@@ -209,8 +210,8 @@ const [departments,setDepartments] = useState([]);
   try {
 
     const response = await fetch(
-      "http://localhost:5000/api/departments"
-    );
+      `${API_BASE_URL}/api/departments`
+        );
 
     const data = await response.json();
 
