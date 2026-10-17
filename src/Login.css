@@ -1230,3 +1230,27 @@ PASSWORD SHOW / HIDE
     font-size: 13px;
   }
 }
+
+/* Login loading state */
+.login-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+
+.login-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: loginSpin 0.7s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes loginSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}

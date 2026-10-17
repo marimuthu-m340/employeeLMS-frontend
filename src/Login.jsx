@@ -12,6 +12,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const { login } = useAuth()
 
   const handleLogin = async (e) => {
@@ -21,6 +22,8 @@ const Login = () => {
     if (!email || !password) {
       toast.error("Please enter email and password");
       return;
+      setIsLoading(true);
+
     }
     console.log("PASSWORD FROM INPUT:", password);
     try {
@@ -74,7 +77,9 @@ const Login = () => {
       } else {
         toast.error("Unable to connect to server");
       }
-    }
+    }finally {
+  setIsLoading(false);
+}
   };
 
   return (
@@ -164,12 +169,20 @@ const Login = () => {
   </div>
 
 </div>
-            <button
-              type="submit"
-              className="login-button"
-            >
-              Login
-            </button>
+           <button
+  type="submit"
+  className="login-button"
+  disabled={isLoading}
+>
+  {isLoading ? (
+    <>
+      <span className="login-spinner"></span>
+      Logging in...
+    </>
+  ) : (
+    "Login"
+  )}
+</button>
 
           </form>
 
